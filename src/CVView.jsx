@@ -1,8 +1,6 @@
-import { Query } from 'react-apollo'
-import gql from 'graphql-tag';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { CV_ID } from './constants';
 import ContentBox from './ContentBox';
 import PersonalInfo from './PersonalInfo';
 
@@ -14,21 +12,24 @@ class CVView extends React.Component {
                 <ContentBox title="Summary">
                     <p>Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum </p>
                 </ContentBox>
-                <ContentBox title="Work Experience">
-                    <p>Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum </p>
-                </ContentBox>
-                <ContentBox title="Education">
-                    <p>Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum </p>
-                </ContentBox>
-                <ContentBox title="Skills">
-                    <p>Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum </p>
-                </ContentBox>
-                <ContentBox title="Languages">
-                    <p>Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum </p>
-                </ContentBox>
-                <ContentBox title="Hobbies">
-                    <p>Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum Lorem ipusm dolor sit amet cap saicum </p>
-                </ContentBox>
+                <div className="columns">
+                    <div className="column">
+                        <div className="has-background-danger">
+                            <Link to="workexperience">Work</Link>
+                        </div>
+                    </div>
+                    <div className="column">
+                        <div className="has-background-danger">
+                            <Link to="education">Education</Link>
+                        </div>
+                    </div>
+                    <div className="column">
+                        <div className="has-background-danger">Hobbies</div>
+                    </div>
+                    <div className="column">
+                        <div className="has-background-danger">Skills</div>
+                    </div>
+                </div>
             </div>
         );
     }
