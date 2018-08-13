@@ -1,0 +1,4 @@
+.cache
+dist
+*.sublime-workspace
+node_modules

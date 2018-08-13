@@ -1,0 +1,43 @@
+.container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    .noSelect {
+        user-select: none;
+    }
+
+    .headLineWrapper {
+        display: flex;
+        align-items: center;
+
+        .headLine {
+            display: flex;
+            flex-basis: 100%;
+            align-items: center;
+            color: rgba(0, 0, 0, 0.35);
+            margin: 8px 12px 8px 0;
+
+            &:before,
+            &:after {
+                content: "";
+                flex-grow: 1;
+                background: rgba(0, 0, 0, 0.35);
+                height: 1px;
+                font-size: 0px;
+                line-height: 0px;
+            }
+
+            &:before {
+                margin: 0 12px 0 0;
+            }
+
+            &:after {
+                margin: 0 0 0 12px;
+            }
+        }
+    }
+
+    .personalInfo {
+        margin: 20px 0;
+    }
+}
